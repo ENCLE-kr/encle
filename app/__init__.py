@@ -3,8 +3,6 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
 import config
-from .views import main_views, company_views, service_views, references_views, news_views, recruitment_views, contact_view
-
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -19,7 +17,7 @@ def create_app():
     from . import models
 
     # Blueprint
-    # from .views import main_views, company_views, service_views, references_views, news_views, recruitment_views, contact_view
+    from .views import main_views, company_views, service_views, references_views, news_views, recruitment_views, contact_view
     app.register_blueprint(main_views.bp)
     app.register_blueprint(company_views.bp)
     app.register_blueprint(service_views.bp)

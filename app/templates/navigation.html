@@ -32,8 +32,16 @@
                 <li class="nav-item nav-item-spacing">
                     <a class="nav-link" href="/service">서비스</a>
                 </li>
-                <li class="nav-item nav-item-spacing">
-                    <a class="nav-link" href="/reference">레퍼런스</a>
+                <li class="nav-item nav-item-spacing dropdown" id="referenceDropdown">
+                    <a class="nav-link dropdown-toggle" href="/references" role="button" aria-expanded="false">
+                        레퍼런스
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/references/2024">2024</a></li>
+                        <li><a class="dropdown-item" href="/references/2023">2023</a></li>
+                        <li><a class="dropdown-item" href="/references/2022">2022</a></li>
+                        <!-- <li><hr class="dropdown-divider"></li> -->
+                    </ul>
                 </li>
                 <li class="nav-item nav-item-spacing">
                     <a class="nav-link" href="/news">뉴스</a>
@@ -44,4 +52,43 @@
             </ul>
         </div>
     </div>
-</nav> 
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.getElementById('referenceDropdown');
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+    let timeoutId;
+
+    // 마우스가 드롭다운 영역에 들어올 때
+    dropdown.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+        dropdownMenu.style.display = 'block';
+        dropdownMenu.style.opacity = '1';
+        dropdownMenu.style.transform = 'translateY(0)';
+    });
+
+    // 마우스가 드롭다운 영역을 벗어날 때
+    dropdown.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(function() {
+            dropdownMenu.style.display = 'none';
+            dropdownMenu.style.opacity = '0';
+            dropdownMenu.style.transform = 'translateY(-10px)';
+        }, 300); // 300ms 지연
+    });
+
+    // 드롭다운 메뉴에 마우스가 들어올 때 타이머 취소
+    dropdownMenu.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+    });
+
+    // 드롭다운 메뉴에서 마우스가 벗어날 때
+    dropdownMenu.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(function() {
+            dropdownMenu.style.display = 'none';
+            dropdownMenu.style.opacity = '0';
+            dropdownMenu.style.transform = 'translateY(-10px)';
+        }, 300); // 300ms 지연
+    });
+});
+</script> 
