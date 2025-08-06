@@ -1,3 +1,22 @@
+/* font
+SUIT 08 ExtraBold
+Min Sans 08 ExtraBold
+프리텐다드 08 ExtraBold
+Wanted Sans ExtraBold */
+
+/* SUIT 08 ExtraBold 글꼴 import */
+@import url('https://fonts.googleapis.com/css2?family=SUIT:wght@800&display=swap');
+
+/* 전체 페이지 글꼴 적용 */
+* {
+    font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800;
+}
+
 /* ENCLE 커스텀 스타일 */
 
 /* 네비게이션 바 투명 스타일 */
@@ -6,6 +25,9 @@
     box-shadow: none;
     transition: all 0.3s ease;
     border-bottom: 0.15rem solid rgba(255, 255, 255, 1.0);
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    /* font-weight: 800; */
+    min-height: 80px;
 }
 
 .navbar.scrolled {
@@ -16,10 +38,11 @@
 }
 
 .navbar-brand {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.8rem;
     color: #ffffff !important;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
 }
 
 .navbar-brand:hover {
@@ -28,13 +51,14 @@
 }
 
 .navbar-nav .nav-link {
-    font-weight: 500;
+    font-weight: 400;
     color: #ffffff !important;
     padding: 0.5rem 1rem !important;
     margin: 0 0.2rem;
     border-radius: 6px;
     transition: all 0.3s ease;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
 }
 
 .navbar-nav .nav-link:hover {
@@ -147,8 +171,9 @@
 
 .hero-title {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 1.5rem;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
     /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
 }
 
@@ -156,6 +181,8 @@
     font-size: 1.3rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
 }
 
 .hero-btn {
@@ -163,9 +190,10 @@
     padding: 0.75rem 2rem;
     border-radius: 50px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
 }
 
 .hero-btn:hover {
@@ -185,12 +213,16 @@
     color: white;
     padding: 2rem 0;
     margin-top: auto;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
 }
 
 /* 버튼 커스텀 스타일 */
 .btn-primary {
     background-color: #3498db;
     border-color: #3498db;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
 }
 
 .btn-primary:hover {
@@ -203,6 +235,8 @@
     border: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
 }
 
 .card:hover {
@@ -216,9 +250,10 @@
 }
 
 .section-title {
-    font-weight: 700;
+    font-weight: 800;
     color: #2c3e50;
     margin-bottom: 2rem;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
 }
 
 /* 애니메이션 */
@@ -262,4 +297,451 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #2980b9;
+}
+
+/* 서비스 슬라이더 스타일 */
+.service-slider-container {
+    position: relative;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-slider {
+    flex: 1;
+    max-width: 100%;
+}
+
+.service-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.service-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.service-content {
+    padding: 2rem 0;
+}
+
+.service-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+}
+
+.service-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
+}
+
+.service-features {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
+}
+
+.feature-item i {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.service-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .service-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay h5 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+}
+
+.image-overlay p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
+}
+
+/* 서비스 이미지 플레이스홀더 */
+.service-image-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.service-image-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.placeholder-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.placeholder-content i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.placeholder-content h5 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+}
+
+.placeholder-content p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+    /* font-family: 'SUIT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+    font-weight: 800;
+}
+
+/* 그라데이션 배경 */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+/* 양 끝 화살표 네비게이션 */
+.nav-arrow-side {
+    background: transparent;
+    border: none;
+    color: #000000;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.nav-arrow-side:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-arrow-side:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-arrow-side {
+    left: -200px;
+}
+
+.next-arrow-side {
+    right: -200px;
+}
+
+/* 하단 인디케이터 컨테이너 */
+.slide-indicators-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* 슬라이드 인디케이터 */
+.slide-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #3498db;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: #3498db;
+    transform: scale(1.1);
+}
+
+/* 반응형 디자인 */
+
+/* 데스크톱 (1200px 이상) */
+@media (min-width: 1200px) {
+    .service-title {
+        font-size: 2.8rem;
+    }
+    
+    .service-description {
+        font-size: 1.2rem;
+    }
+    
+    .nav-arrow-side {
+        width: 105px;
+        height: 105px;
+        font-size: 2.7rem;
+    }
+    
+    .prev-arrow-side {
+        left: -250px;
+    }
+    
+    .next-arrow-side {
+        right: -250px;
+    }
+}
+
+/* 태블릿 (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .service-title {
+        font-size: 2.2rem;
+    }
+    
+    .service-description {
+        font-size: 1.1rem;
+    }
+    
+    .service-images {
+        margin-top: 1.5rem;
+    }
+    
+    .nav-arrow-side {
+        width: 82px;
+        height: 82px;
+        font-size: 1.95rem;
+    }
+    
+    .prev-arrow-side {
+        left: -180px;
+    }
+    
+    .next-arrow-side {
+        right: -180px;
+    }
+}
+
+/* 스마트폰 (767px 이하) */
+@media (max-width: 767px) {
+    .service-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .service-features {
+        margin-top: 1.5rem;
+    }
+    
+    .feature-item {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .service-images {
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+    
+    .image-container {
+        margin-bottom: 1rem;
+    }
+    
+    .service-image-placeholder {
+        height: 150px;
+    }
+    
+    .placeholder-content i {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .placeholder-content h5 {
+        font-size: 1rem;
+    }
+    
+    .placeholder-content p {
+        font-size: 0.8rem;
+    }
+    
+    .nav-arrow-side {
+        width: 67px;
+        height: 67px;
+        font-size: 1.5rem;
+    }
+    
+    .prev-arrow-side {
+        left: -120px;
+    }
+    
+    .next-arrow-side {
+        right: -120px;
+    }
+    
+    .slide-indicators-container {
+        margin-top: 1.5rem;
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* 작은 스마트폰 (480px 이하) */
+@media (max-width: 480px) {
+    .service-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-description {
+        font-size: 0.9rem;
+    }
+    
+    .service-content {
+        padding: 1rem 0;
+    }
+    
+    .service-images {
+        gap: 0.8rem;
+    }
+    
+    .service-image-placeholder {
+        height: 120px;
+    }
+    
+    .placeholder-content i {
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .placeholder-content h5 {
+        font-size: 0.9rem;
+    }
+    
+    .placeholder-content p {
+        font-size: 0.7rem;
+    }
+    
+    .nav-arrow-side {
+        width: 60px;
+        height: 60px;
+        font-size: 1.35rem;
+    }
+    
+    .prev-arrow-side {
+        left: -100px;
+    }
+    
+    .next-arrow-side {
+        right: -100px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
 }

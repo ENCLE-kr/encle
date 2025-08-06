@@ -15,38 +15,180 @@
 <!-- 서비스 섹션 -->
 <section class="section bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-title">우리의 서비스</h2>
+        <!-- 서비스 슬라이더 컨테이너 -->
+        <div class="service-slider-container">
+            <!-- 왼쪽 화살표 -->
+            <button class="nav-arrow-side prev-arrow-side" onclick="changeServiceSlide(-1)">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            
+            <!-- 서비스 슬라이더 -->
+            <div class="service-slider">
+                <!-- 첫 번째 서비스 -->
+                <div class="service-slide active" data-slide="1">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="service-content">
+                                <h3 class="service-title">혼잡도</h3>
+                                <p class="service-description">
+                                    해당 부분은 제품의 상세 설명하는 부분입니다.<br>
+                                    해당 부분은 제품의 상세 설명하는 부분입니다.<br>
+                                    해당 부분은 제품의 상세 설명하는 부분입니다.
+                                </p>
+                                <div class="service-features">
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>혼잡 구간 실시간 모니터링링</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>혼잡 구간 실시간 예측</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>혼잡도 시각화 대시보드</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="service-images">
+                                <div class="image-container">
+                                    <video class="service-video" autoplay loop muted playsinline style="width: 100%; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                                        <source src="{{ url_for('static', filename='videos/crowd-visual.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="image-container">
+                                    <div class="service-image-placeholder bg-gradient-secondary">
+                                        <div class="placeholder-content">
+                                            <i class="bi bi-cpu"></i>
+                                            <h5>혼잡도 예측</h5>
+                                            <p>혼잡도 예측 모델 구축</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 두 번째 서비스 -->
+                <div class="service-slide" data-slide="2">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="service-content">
+                                <h3 class="service-title">소셜</h3>
+                                <p class="service-description">
+                                    해당 부분은 제품의 상세 설명하는 부분입니다.<br>
+                                    해당 부분은 제품의 상세 설명하는 부분입니다.<br>
+                                    해당 부분은 제품의 상세 설명하는 부분입니다.
+                                </p>
+                                <div class="service-features">
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>데이터 마이그레이션</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>데이터 수집집</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>시각화 대시보드</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="service-images">
+                                <div class="image-container">
+                                    <div class="service-image-placeholder bg-gradient-success">
+                                        <div class="placeholder-content">
+                                            <i class="bi bi-cloud-check"></i>
+                                            <h5>소셜 리스닝</h5>
+                                            <p>소셜 리스닝닝</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-container">
+                                    <div class="service-image-placeholder bg-gradient-info">
+                                        <div class="placeholder-content">
+                                            <i class="bi bi-gear-wide-connected"></i>
+                                            <h5>DevOps 파이프라인</h5>
+                                            <p>자동화된 배포 및 운영</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 세 번째 서비스 -->
+                <div class="service-slide" data-slide="3">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="service-content">
+                                <h3 class="service-title">웹 애플리케이션 개발</h3>
+                                <p class="service-description">
+                                    사용자 중심의 현대적인 웹 애플리케이션을 개발합니다. 
+                                    React, Vue.js, Django 등 최신 기술 스택을 활용하여 
+                                    반응형이고 성능이 뛰어난 웹 서비스를 구축합니다.
+                                </p>
+                                <div class="service-features">
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>반응형 웹 디자인</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>프론트엔드 개발</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-primary-custom"></i>
+                                        <span>백엔드 API 개발</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="service-images">
+                                <div class="image-container">
+                                    <div class="service-image-placeholder bg-gradient-warning">
+                                        <div class="placeholder-content">
+                                            <i class="bi bi-code-slash"></i>
+                                            <h5>프론트엔드 개발</h5>
+                                            <p>사용자 경험 최적화</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-container">
+                                    <div class="service-image-placeholder bg-gradient-danger">
+                                        <div class="placeholder-content">
+                                            <i class="bi bi-server"></i>
+                                            <h5>백엔드 시스템</h5>
+                                            <p>안정적인 서버 아키텍처</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <!-- 오른쪽 화살표 -->
+            <button class="nav-arrow-side next-arrow-side" onclick="changeServiceSlide(1)">
+                <i class="bi bi-chevron-right"></i>
+            </button>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 fade-in-up">
-                    <div class="card-body text-center">
-                        <i class="bi bi-gear-fill text-primary-custom" style="font-size: 3rem;"></i>
-                        <h5 class="card-title mt-3">기술 솔루션</h5>
-                        <p class="card-text">최신 기술을 활용한 맞춤형 솔루션을 제공합니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 fade-in-up">
-                    <div class="card-body text-center">
-                        <i class="bi bi-lightbulb-fill text-primary-custom" style="font-size: 3rem;"></i>
-                        <h5 class="card-title mt-3">혁신 아이디어</h5>
-                        <p class="card-text">창의적인 아이디어로 새로운 가치를 창출합니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 fade-in-up">
-                    <div class="card-body text-center">
-                        <i class="bi bi-people-fill text-primary-custom" style="font-size: 3rem;"></i>
-                        <h5 class="card-title mt-3">고객 지원</h5>
-                        <p class="card-text">24/7 고객 지원으로 언제든지 도움을 받으실 수 있습니다.</p>
-                    </div>
-                </div>
+
+        <!-- 하단 인디케이터 -->
+        <div class="slide-indicators-container">
+            <div class="slide-indicators">
+                <span class="indicator active" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
             </div>
         </div>
     </div>
@@ -70,4 +212,48 @@
         </div>
     </div>
 </section>
+
+<script>
+let currentSlide = 1;
+const totalSlides = 3;
+
+function changeServiceSlide(direction) {
+    const slides = document.querySelectorAll('.service-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    // 현재 슬라이드 숨기기
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // 새 슬라이드 계산
+    currentSlide += direction;
+    if (currentSlide > totalSlides) currentSlide = 1;
+    if (currentSlide < 1) currentSlide = totalSlides;
+    
+    // 새 슬라이드 보이기
+    document.querySelector(`[data-slide="${currentSlide}"]`).classList.add('active');
+    document.querySelector(`.indicator[data-slide="${currentSlide}"]`).classList.add('active');
+}
+
+// 인디케이터 클릭 이벤트
+document.addEventListener('DOMContentLoaded', function() {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', function() {
+            const targetSlide = parseInt(this.getAttribute('data-slide'));
+            const slides = document.querySelectorAll('.service-slide');
+            const allIndicators = document.querySelectorAll('.indicator');
+            
+            // 모든 슬라이드와 인디케이터 비활성화
+            slides.forEach(slide => slide.classList.remove('active'));
+            allIndicators.forEach(ind => ind.classList.remove('active'));
+            
+            // 선택된 슬라이드와 인디케이터 활성화
+            document.querySelector(`[data-slide="${targetSlide}"]`).classList.add('active');
+            this.classList.add('active');
+            currentSlide = targetSlide;
+        });
+    });
+});
+</script>
 {% endblock %} 
