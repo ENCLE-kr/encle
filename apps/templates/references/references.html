@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- 레퍼런스 소개 섹션 -->
+<section class="reference-intro-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="intro-content">
+                    <h1 class="intro-title">ENCLE 레퍼런스</h1>
+                    <p class="intro-description">
+                        ENCLE은 다양한 분야의 프로젝트를 성공적으로 수행하며
+                        고객의 비즈니스 성장을 위한 최적의 솔루션을 제공합니다.
+                    </p>
+                    <div class="intro-features">
+                        <div class="feature-item">
+                            <i class="bi bi-1-circle-fill text-primary-custom"></i>
+                            <span>다양한 산업 분야 경험</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-2-circle-fill text-primary-custom"></i>
+                            <span>최신 기술 스택 활용</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-3-circle-fill text-primary-custom"></i>
+                            <span>고객 맞춤형 솔루션</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="intro-stats">
+                    <div class="stats-container">
+                        <div class="stat-item"
+                            style="background: rgba(52, 152, 219, 0.1); border: 1px solid rgba(52, 152, 219, 0.2);">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label" style="color: #2c3e50;">완료 프로젝트</div>
+                        </div>
+                        <div class="stat-item"
+                            style="background: rgba(52, 152, 219, 0.1); border: 1px solid rgba(52, 152, 219, 0.2);">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label" style="color: #2c3e50;">고객사</div>
+                        </div>
+                        <div class="stat-item"
+                            style="background: rgba(52, 152, 219, 0.1); border: 1px solid rgba(52, 152, 219, 0.2);">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label" style="color: #2c3e50;">고객 만족도</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 레퍼런스 섹션 -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-title">
+                    {% if selected_year %}
+                    {{ selected_year }}년 레퍼런스
+                    {% else %}
+                    레퍼런스
+                    {% endif %}
+                </h2>
+                <p class="lead mb-5">
+                    {% if selected_year %}
+                    {{ selected_year }}년에 진행한 프로젝트들을 확인하실 수 있습니다.
+                    {% else %}
+                    ENCLE이 진행한 다양한 프로젝트들을 확인하실 수 있습니다.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        <!-- 연도 필터 -->
+        <div class="row mb-4">
+            <div class="col-lg-12 text-center">
+                <div class="year-filter">
+                    <a href="{{ url_for('references.references') }}"
+                        class="btn btn-outline-primary {% if not selected_year %}active{% endif %}">
+                        전체
+                    </a>
+                    <a href="{{ url_for('references.references_by_year', year='2024') }}"
+                        class="btn btn-outline-primary {% if selected_year == '2024' %}active{% endif %}">
+                        2024
+                    </a>
+                    <a href="{{ url_for('references.references_by_year', year='2023') }}"
+                        class="btn btn-outline-primary {% if selected_year == '2023' %}active{% endif %}">
+                        2023
+                    </a>
+                    <a href="{{ url_for('references.references_by_year', year='2022') }}"
+                        class="btn btn-outline-primary {% if selected_year == '2022' %}active{% endif %}">
+                        2022
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 레퍼런스 테이블 -->
+        <div class="row">
+            <div class="col-lg-12">
+                {% if references_list %}
+                <div class="table-responsive">
+                    <table class="table table-hover reference-table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">일자</th>
+                                <th scope="col">과업목적</th>
+                                <th scope="col">과업내용</th>
+                                <th scope="col">기관/회사</th>
+                                <!-- <th scope="col">등록일</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for reference in references_list %}
+                            <tr class="reference-row">
+                                <td class="reference-date">
+                                    <span class="badge bg-primary">{{ reference.date }}</span>
+                                </td>
+                                <td class="reference-purpose">
+                                    {{ reference.purpose }}
+                                </td>
+                                <td class="reference-content">
+                                    {{ reference.content }}
+                                </td>
+                                <td class="reference-organization">
+                                    <strong>{{ reference.organization }}</strong>
+                                </td>
+                                <!-- <td class="reference-create-date">
+                                    <small class="text-muted">
+                                        {{ reference.create_date.strftime('%Y-%m-%d') }}
+                                    </small>
+                                </td> -->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center py-5">
+                    <div class="empty-state">
+                        <i class="bi bi-inbox display-1 text-muted"></i>
+                        <h4 class="mt-3">데이터가 없습니다</h4>
+                        <p class="text-muted">
+                            {% if selected_year %}
+                            {{ selected_year }}년에 등록된 레퍼런스가 없습니다.
+                            {% else %}
+                            등록된 레퍼런스가 없습니다.
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

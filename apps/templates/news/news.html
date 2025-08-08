@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- 뉴스 섹션 -->
+<section class="section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h1 class="section-title">NEWS</h1>
+                <p class="lead">엔클 관련 최신 뉴스와 소식을 확인하세요.</p>
+                <a href="{{ url_for('news.update') }}" class="btn btn-primary">
+                    <i class="bi bi-plus-circle me-2"></i>
+                    뉴스 추가
+                </a>
+            </div>
+        </div>
+
+        <!-- 플래시 메시지 표시 -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- 뉴스 목록 -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                {% if news_list %}
+                    {% for news in news_list %}
+                    <div class="card shadow-sm hover-lift mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4" style="min-height: 200px;">
+                                <img src="{{ url_for('static', filename='assets/img/news/' + news.picture) }}" 
+                                     class="img-fluid h-100 w-100" alt="{{ news.title }}"
+                                     style="object-fit: cover; min-height: 200px;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body d-flex flex-column h-100 p-3">
+                                    <div class="mb-2">
+                                        <span class="badge bg-primary">{{ news.date }}</span>
+                                    </div>
+                                    <h5 class="card-title mb-2">{{ news.title }}</h5>
+                                    <p class="card-text flex-grow-1 mb-2">
+                                        {{ news.content[:100] }}{% if news.content|length > 100 %}...{% endif %}
+                                    </p>
+                                    <div class="mt-auto">
+                                        <a href="{{ news.link }}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                            <i class="bi bi-box-arrow-up-right me-1"></i>
+                                            자세히 보기
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="text-center py-5">
+                        <div class="empty-state">
+                            <i class="bi bi-newspaper display-1 text-muted"></i>
+                            <h4 class="mt-3">등록된 뉴스가 없습니다</h4>
+                            <p class="text-muted">첫 번째 뉴스를 추가해보세요.</p>
+                            <a href="{{ url_for('news.update') }}" class="btn btn-primary">
+                                <i class="bi bi-plus-circle me-2"></i>
+                                뉴스 추가
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 카드 호버 효과를 위한 CSS -->
+<style>
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-top-container {
+    position: relative;
+}
+
+.card-img-top-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.1));
+    pointer-events: none;
+}
+
+/* 섹션 크기 자동 조절 */
+.section {
+    min-height: auto;
+    height: auto;
+}
+
+/* 뉴스 카드 최적화 */
+.card {
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: 0.375rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* 이미지 컨테이너 최적화 */
+.col-md-4 {
+    overflow: hidden;
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+/* 반응형 이미지 크기 유지 */
+@media (max-width: 767.98px) {
+    .col-md-4 {
+        min-height: 150px !important;
+    }
+    
+    .col-md-4 img {
+        min-height: 150px !important;
+    }
+}
+</style>
+{% endblock %}

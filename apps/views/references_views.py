@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from app.models import Reference
+from apps.models import Reference
 
 bp = Blueprint('references', __name__, url_prefix='/references')
 
