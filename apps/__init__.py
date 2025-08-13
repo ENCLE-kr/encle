@@ -17,10 +17,10 @@ def create_app():
     from . import models
 
     # Blueprint
-    from .views import main_views, company_views, service_views, references_views, news_views, recruitment_views, contact_view
+    from .views import main_views, company_views, solution_views, references_views, news_views, recruitment_views, contact_view
     app.register_blueprint(main_views.bp)
     app.register_blueprint(company_views.bp)
-    app.register_blueprint(service_views.bp)
+    app.register_blueprint(solution_views.bp)
     app.register_blueprint(references_views.bp)
     app.register_blueprint(news_views.bp)
     app.register_blueprint(recruitment_views.bp)
