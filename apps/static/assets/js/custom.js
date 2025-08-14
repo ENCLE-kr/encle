@@ -179,6 +179,33 @@ function changeServiceSlide(direction) {
     document.querySelector(`.indicator[data-slide="${currentSlide}"]`).classList.add('active');
 }
 
+// 소개 섹션 스크롤 애니메이션 - 이미지만 애니메이션
+document.addEventListener('DOMContentLoaded', function() {
+    const contactSection = document.querySelector('.contact-section');
+    
+    if (contactSection) {
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const contactObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 이미지만 애니메이션 적용
+                    const images = entry.target.querySelectorAll('.intro-image');
+                    images.forEach(img => img.classList.add('animate'));
+                    
+                    // 한 번만 실행되도록 관찰 중단
+                    contactObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        contactObserver.observe(contactSection);
+    }
+});
+
 // 인디케이터 클릭 이벤트
 document.addEventListener('DOMContentLoaded', function() {
     const indicators = document.querySelectorAll('.indicator');

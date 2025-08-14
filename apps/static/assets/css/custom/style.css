@@ -1229,6 +1229,52 @@ body.other-page .navbar-toggler-icon {
     margin-top: 25px;
 }
 
+/* Contact Section Image Animation */
+.contact-section .intro-image {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.contact-section .intro-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-section .intro-image.middle {
+    transition-delay: 0.3s;
+}
+
+.contact-section .intro-image.last {
+    transition-delay: 0.6s;
+}
+
+/* Contact Section Text Animation - 텍스트와 버튼은 고정 */
+.contact-section .section-eyebrow,
+.contact-section .section-title,
+.contact-section .btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    70% {
+        transform: scale(0.9) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
 /* Use Case Images Styles */
 .usecase-images {
     margin-top: 3rem;
