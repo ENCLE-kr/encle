@@ -65,8 +65,7 @@
             <div class="col-lg-6">
                 <p class="mb-2 section-eyebrow text-primary">MISSION</p>
                 <h2 class="section-title">
-                    혁신적인 AI 기술로
-                    <br>
+                    <span style="color: #828282;">혁신적인 AI 기술로</span><br>
                     관광산업의 디지털 전환을 이끌어갑니다
                 </h2>
                 <p class="text-muted" style="font-size: 1.1rem; font-weight: 500;">
@@ -76,6 +75,7 @@
                 
                 <!-- 통계 섹션 -->
                 <div class="stats-section mt-5">
+                    <div class="stat-divider-top"></div>
                     <div class="stat-row">
                         <div class="stat-text">ENCLE 프로젝트 완료 수</div>
                         <div class="stat-number-container">
@@ -91,11 +91,12 @@
                             <span class="stat-plus">+</span>
                         </div>
                     </div>
+                    <div class="stat-divider-bottom"></div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="mission-image-container">
-                    <img src="{{ url_for('static', filename='assets/img/contact_1.jpg') }}" alt="ENCLE Mission 이미지" class="img-fluid rounded mission-image">
+                    <img src="{{ url_for('static', filename='assets/img/dashboard_1.jpg') }}" alt="ENCLE Mission 이미지" class="img-fluid rounded mission-image">
                 </div>
             </div>
         </div>
@@ -103,24 +104,24 @@
 </section>
 
 <!-- 회사 가치 섹션 -->
-<section class="section">
+<section class="section bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center mb-5">
-                <h2 class="section-title">ENCLE의 가치</h2>
-                <p class="lead">우리가 추구하는 핵심 가치와 미션</p>
-            </div>
+        <!-- 회사 가치 섹션 헤더 -->
+        <div class="text-center mb-5">
+            <p class="text-primary mb-2 section-eyebrow">VALUES</p>
+            <p class="section-header-title mb-4">ENCLE의 가치</p>
+            <p class="text-muted" style="font-size: 1.1rem;">엔클은 혁신적인 사고와 고객 니즈의 높은 가치를 두며<br>신뢰할 수 있는 데이터를 기반으로 새로운 관광 산업 환경을 만들어갑니다</p>
         </div>
-        <div class="row">
+        <div class="row" style="margin-top: 10rem;">
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="value-card text-center">
                     <div class="value-icon">
                         <i class="bi bi-lightbulb"></i>
                     </div>
-                    <h5 class="value-title">혁신</h5>
+                    <h5 class="value-title" style="font-weight: 500;">INNOVATION</h5>
                     <p class="value-description">
-                        끊임없는 혁신을 통해 관광 산업의 새로운 가능성을 
-                        발견하고 실현합니다.
+                        끊임없는 혁신을 통해 관광 산업의<br> 
+                        새로운 가능성을 실현합니다
                     </p>
                 </div>
             </div>
@@ -129,10 +130,10 @@
                     <div class="value-icon">
                         <i class="bi bi-people"></i>
                     </div>
-                    <h5 class="value-title">협력</h5>
+                    <h5 class="value-title" style="font-weight: 500;">COLLABORATION</h5>
                     <p class="value-description">
-                        파트너와의 긴밀한 협력을 통해 
-                        상호 성장과 발전을 추구합니다.
+                        파트너와의 긴밀한 협력을 통해<br> 
+                        상호 성장과 발전을 추구합니다
                     </p>
                 </div>
             </div>
@@ -141,10 +142,10 @@
                     <div class="value-icon">
                         <i class="bi bi-heart"></i>
                     </div>
-                    <h5 class="value-title">고객 중심</h5>
+                    <h5 class="value-title" style="font-weight: 500;">NEEDS</h5>
                     <p class="value-description">
-                        고객의 니즈를 최우선으로 하여 
-                        최고의 가치를 제공합니다.
+                        고객의 니즈를 최우선으로 하여<br> 
+                        최고의 가치를 제공합니다
                     </p>
                 </div>
             </div>
@@ -153,10 +154,10 @@
                     <div class="value-icon">
                         <i class="bi bi-award"></i>
                     </div>
-                    <h5 class="value-title">품질</h5>
+                    <h5 class="value-title" style="font-weight: 500;">QUALITY</h5>
                     <p class="value-description">
-                        최고의 품질과 신뢰성을 바탕으로 
-                        지속 가능한 성장을 이룹니다.
+                        최고의 품질과 신뢰성을 바탕으로<br> 
+                        지속 가능한 성장을 이룹니다
                     </p>
                 </div>
             </div>
@@ -165,62 +166,53 @@
 </section>
 
 <!-- 회사 히스토리(연혁) 섹션 -->
-<section class="section bg-light">
+<section class="section mission-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center mb-5">
-                <h2 class="section-title">회사 연혁</h2>
-                <p class="lead">ENCLE의 성장 과정과 주요 이정표</p>
+            <div class="col-lg-6">
+                <p class="mb-2 section-eyebrow text-primary">HISTORY</p>
+                <h2 class="section-title">
+                    <span style="color: #828282;">관광 DX를 위해</span><br>
+                    ENCLE은 지속적으로 성장하고 있습니다
+                </h2>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2025</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2024</div>
-                            <h5 class="timeline-title">Tourism Tech 플랫폼 출시</h5>
-                            <p class="timeline-description">
-                                AI 기반 관광 정보 플랫폼을 출시하여 
-                                개인화된 여행 경험을 제공하기 시작했습니다.
-                            </p>
+                            <h5 class="timeline-title">COAITIX v1.0 출시</h5>
+                            <h5 class="timeline-title">고려대학교 디지털혁신연구센터 업무제휴</h5>
+                            <h5 class="timeline-title">제98차 한국관광학회 경북 • 경주 국제학술대회 장려상 수상</h5>
+                            <h5 class="timeline-title">키스트이노베이션 서울창업성장센터 입주</h5>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2024</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2023</div>
-                            <h5 class="timeline-title">IoT 센서 기술 개발</h5>
-                            <p class="timeline-description">
-                                스마트 관광을 위한 IoT 센서 기술을 개발하여 
-                                실시간 관광 정보 수집 시스템을 구축했습니다.
-                            </p>
+                            <h5 class="timeline-title">2024년 문화 빅데이터 플랫폼 신규센터 선정 (한국문화정보원)</h5>
+                            <h5 class="timeline-title">Crowd Density Detector 출시</h5>
+                            <h5 class="timeline-title">제96차 한국관광학회 전남 • 여수 국제학술대회 우수논문상 수상</h5>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2023</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2022</div>
-                            <h5 class="timeline-title">회사 설립</h5>
-                            <p class="timeline-description">
-                                관광과 기술의 융합을 목표로 ENCLE을 설립하여 
-                                관광 산업의 디지털 혁신을 시작했습니다.
-                            </p>
+                            <h5 class="timeline-title">2023 K-Data 바우처 공급기업 선정 (한국데이터산업진흥원)</h5>
+                            <h5 class="timeline-title">주식회사 전한 업무제휴</h5>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">2022</div>
                         <div class="timeline-content">
-                            <div class="timeline-date">2021</div>
-                            <h5 class="timeline-title">사업 아이디어 구상</h5>
-                            <p class="timeline-description">
-                                관광 산업의 디지털 전환 필요성을 인식하고 
-                                Tourism Tech 솔루션 개발을 계획했습니다.
-                            </p>
+                            <h5 class="timeline-title">벤처기업인증</h5>
+                            <h5 class="timeline-title">성북구 • 한성대 벤처창업지원센터 입주</h5>
+                            <h5 class="timeline-title">ENCLE 설립</h5>
                         </div>
                     </div>
                 </div>
@@ -421,7 +413,7 @@
 }
 
 .value-card {
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -429,9 +421,9 @@
     transition: transform 0.3s ease;
 }
 
-.value-card:hover {
+/* .value-card:hover {
     transform: translateY(-5px);
-}
+} */
 
 .value-icon {
     width: 80px;
@@ -466,68 +458,38 @@
     padding: 2rem 0;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #007bff;
-    transform: translateX(-50%);
-}
-
 .timeline-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
     position: relative;
-    margin-bottom: 3rem;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-left: 0;
-    margin-right: 50%;
-    text-align: right;
-    padding-right: 2rem;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: 50%;
-    margin-right: 0;
+.timeline-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
     text-align: left;
-    padding-left: 2rem;
-}
-
-.timeline-marker {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background: #007bff;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    border: 4px solid white;
-    box-shadow: 0 0 0 2px #007bff;
 }
 
 .timeline-content {
     background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 1.5rem 1.5rem 1.5rem 0rem;
+    /* border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.timeline-date {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #007bff;
-    margin-bottom: 0.5rem;
+    border-left: 4px solid #007bff; */
 }
 
 .timeline-title {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #1c1c1c;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-title:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-description {
@@ -539,7 +501,7 @@
 /* Mission 섹션 스타일 */
 .mission-section {
     background-color: white;
-    padding: 100px 0;
+    /* padding: 100px 0; */
 }
 
 .mission-section .section-eyebrow {
@@ -588,10 +550,9 @@
 /* Mission 섹션 통계 스타일 */
 .stats-section {
     margin-top: 3rem;
-    background: #fafafa;
+    background: white;
     border-radius: 8px;
     padding: 2rem;
-    border: 1px solid #e9ecef;
 }
 
 .stat-row {
@@ -622,10 +583,22 @@
     margin-top:0.3rem
 }
 
+.stat-divider-top {
+    height: 1px;
+    background: #000000;
+    margin: 0 0 1rem 0;
+}
+
 .stat-divider {
     height: 1px;
     background: #e9ecef;
     margin: 0.5rem 0;
+}
+
+.stat-divider-bottom {
+    height: 1px;
+    background: #000000;
+    margin: 1rem 0 0 0;
 }
 
 .stat-plus {
@@ -661,21 +634,13 @@
     .company-intro-section {
         padding: 100px 0 60px 0;
     }
-    .timeline::before {
-        left: 30px;
-    }
-    
-    .timeline-item .timeline-content {
-        margin-left: 60px !important;
-        margin-right: 0 !important;
-        text-align: left !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    
-    .timeline-marker {
-        left: 30px;
-    }
+         .timeline-date {
+         font-size: 1.3rem;
+     }
+     
+     .timeline-content {
+         padding: 1rem;
+     }
     
     .tourism-image-placeholder {
         height: 250px;
