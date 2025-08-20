@@ -2,82 +2,60 @@
 
 {% block content %}
 <!-- 서비스 소개 섹션 -->
-<section class="section" style="padding-top: 120px;">
+<section class="solution-intro-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h1 class="section-title">ENCLE 서비스</h1>
-                <p class="lead mb-4">
-                    ENCLE은 혁신적인 기술 솔루션을 통해 고객의 비즈니스 성장을 돕습니다.
-                    최신 기술과 전문성을 바탕으로 고객 맞춤형 서비스를 제공합니다.
+                <p class="mb-2 text-primary section-eyebrow">SOULTIONS</p>
+                <h1 class="section-title">
+                    <span style="color: #828282;">Deep Learning-Based</span><br>
+                    COAITIX & Social Analysis
+                </h1>
+                <p class="lead">
+                    엔클의 AI 기술로 인구 밀집을 완벽하게 예측하고<br>
+                    소셜 분석을 통해 K-컬처를 활용한 브랜드 혁신을 돕습니다
                 </p>
-                <div class="row mt-5">
-                    <div class="col-md-4 mb-4">
-                        <div class="text-center">
-                            <i class="bi bi-gear-wide-connected display-4 text-primary mb-3"></i>
-                            <h5>혁신적인 솔루션</h5>
-                            <p class="text-muted">최신 기술을 활용한 차별화된 서비스</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="text-center">
-                            <i class="bi bi-people display-4 text-primary mb-3"></i>
-                            <h5>전문성</h5>
-                            <p class="text-muted">풍부한 경험과 전문 지식을 바탕</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="text-center">
-                            <i class="bi bi-heart display-4 text-primary mb-3"></i>
-                            <h5>고객 중심</h5>
-                            <p class="text-muted">고객의 요구사항에 맞는 맞춤형 서비스</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 제품1 소개 섹션 -->
+<!-- Crowd Density Detector 소개 섹션 -->
 <section class="section bg-light">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-start">
             <div class="col-lg-6">
-                <div class="service-content">
-                    <h2 class="section-title">AIOT Sensor</h2>
-                    <p class="lead mb-4">
-                        혁신적인 IoT 센서 기술을 활용한 실시간 모니터링 솔루션입니다.
-                        데이터 수집부터 분석까지 원스톱 서비스를 제공합니다.
+                <div class="service-content" style="padding-top: 2rem;">
+                    <h3 class="service-title" style="margin-bottom: 0.5rem;">Crowd Density Detector</h3>
+                    <p class="text-muted" style="font-size: 1.0rem;">IOT Platform & Solution Toy's Myth</p>
+                    <p class="service-description" style="margin-top: 5rem;">
+                        AI로 Wi-Fi가 공간을 이해하는 시대!<br>
+                        우리의 AI 기반 Wi-Fi 센싱 기술은 보이지 않는 신호로 공간 속 변화를 읽어내고, AI가 이를 행동, 상황 데이터로 해석합니다.
+                        카메라 없이도, 벽 너머에서도, 개인의 정보를 지키면서 안전과 편리함을 제공합니다.
                     </p>
                     <div class="service-features">
                         <div class="feature-item">
-                            <span class="feature-number">1</span>
-                            <span>실시간 데이터 수집</span>
+                            <i class="bi bi-1-square-fill text-primary"></i>
+                            <span>유동인구 및 시퀀스 데이터 수집</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-number">2</span>
-                            <span>스마트 센서 네트워크</span>
+                            <i class="bi bi-2-square-fill text-primary"></i>
+                            <span>타사 대비 150% 높은 정확도</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-number">3</span>
-                            <span>클라우드 기반 분석</span>
+                            <i class="bi bi-3-square-fill text-primary"></i>
+                            <span>온도 • 습도 • 미세먼지 센서 추가 탑재</span>
                         </div>
                     </div>
-                    <a href="#aiot-detail" class="btn btn-primary mt-3">
-                        <i class="bi bi-arrow-down me-2"></i>
-                        자세히 보기
-                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="service-image-container">
-                    <div class="service-image-placeholder bg-gradient-success">
-                        <div class="placeholder-content">
-                            <i class="bi bi-cpu"></i>
-                            <h5>AIOT Sensor</h5>
-                            <p>스마트 센서 솔루션</p>
-                        </div>
+                <div class="service-images">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="Crowd Density Detector 1" class="service-image" style="width: 100%; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="Crowd Density Detector 2" class="service-image" style="width: 100%; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
                     </div>
                 </div>
             </div>
@@ -85,146 +63,154 @@
     </div>
 </section>
 
-<!-- 제품1 상세 내용 섹션 -->
+<!-- Crowd Density Detector 상세 내용 섹션 -->
 <section class="section" id="aiot-detail">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center mb-5">
-                <h2 class="section-title">AIOT Sensor 상세 정보</h2>
-                <p class="lead">고도화된 센서 기술과 AI 분석을 결합한 솔루션</p>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="detail-content">
+                    <h5 class="detail-title">유동인구 및 시퀀스 데이터 수집</h5>
+                    <p class="detail-text">
+                        최적의 환경을 유지하고 실시간 변화를 감지해야 하는 현대적인 공간을 위해 
+                        설계된 당사의 Crowd Density Detector는 정밀한 유동인구 측정과 이동 경로 모니터링을 통해 
+                        인구 밀집도 변화를 즉시 파악할 수 있는 솔루션입니다
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="detail-image-container">
+                    <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="온도 센서" class="detail-image">
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-thermometer-half display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">온도 센서</h5>
-                        <p class="card-text">
-                            정밀한 온도 측정과 실시간 모니터링을 통해 
-                            환경 변화를 즉시 감지합니다.
-                        </p>
-                    </div>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="detail-content">
+                    <h5 class="detail-title">타사 대비 150% 높은 정확도</h5>
+                    <p class="detail-text">
+                        Wi-Fi 신호를 통해 스마트폰 내의 고유 값인 MAC 주소를 수집하며
+                        AI 기반으로 유동인구 인구 밀집도 재방문율 등을 
+                        높은 정확도로 분석할 수 있는 솔루션입니다다
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-droplet display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">습도 센서</h5>
-                        <p class="card-text">
-                            습도 변화를 정확하게 측정하여 
-                            최적의 환경 조건을 유지합니다.
-                        </p>
-                    </div>
+            <div class="col-lg-6">
+                <div class="detail-image-container">
+                    <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="습도 센서" class="detail-image">
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-wifi display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">무선 통신</h5>
-                        <p class="card-text">
-                            안정적인 무선 네트워크를 통해 
-                            실시간 데이터 전송이 가능합니다.
-                        </p>
-                    </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="detail-content">
+                    <h5 class="detail-title">온도 • 습도 • 미세먼지 센서 추가 탑재</h5>
+                    <p class="detail-text">
+                        기존의 유동인구 분석 기능에 정밀 환경 센서를 통합해
+                        공기질 부터 체감 환경까지 실내외 환경을 종합적으로 
+                        한번에 확인할 수 있는 솔루션입니다 
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="detail-image-container">
+                    <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="무선 통신" class="detail-image">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 제품2 소개 섹션 -->
+<!-- COAITIX 소개 섹션 -->
 <section class="section bg-light">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2">
-                <div class="service-content">
-                    <h2 class="section-title">COAITIX</h2>
-                    <p class="lead mb-4">
-                        클라우드 기반 AI 분석 플랫폼으로, 
-                        대용량 데이터를 실시간으로 처리하고 인사이트를 제공합니다.
-                    </p>
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <span class="feature-number">1</span>
-                            <span>빅데이터 처리</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-number">2</span>
-                            <span>AI 기반 분석</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-number">3</span>
-                            <span>실시간 대시보드</span>
-                        </div>
-                    </div>
-                    <a href="#coaitix-detail" class="btn btn-primary mt-3">
-                        <i class="bi bi-arrow-down me-2"></i>
-                        자세히 보기
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="service-image-container">
-                    <div class="service-image-placeholder bg-gradient-info">
-                        <div class="placeholder-content">
-                            <i class="bi bi-cloud"></i>
-                            <h5>COAITIX</h5>
-                            <p>AI 분석 플랫폼</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                 <div class="row align-items-center">
+             <div class="col-lg-6">
+                 <div class="service-images d-flex align-items-center" style="height: 100%;">
+                     <div class="image-container w-100">
+                         <video class="service-video" autoplay loop muted playsinline style="width: 100%; border-radius: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                             <source src="{{ url_for('static', filename='assets/videos/crowd-visual.mp4') }}" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6">
+                 <div class="service-content" style="padding-top: 2rem;">
+                     <h3 class="service-title" style="margin: 0 0 0.5rem 5rem;">COAITIX</h3>
+                     <p class="text-muted" style="font-size: 1.0rem; margin: 0 0 0 5rem">Crowd Density Dashboard</p>
+                     <p class="service-description" style="margin: 5rem 0 2rem 5rem;">
+                         이제 느낌이 아닌 데이터로 확인!<br>
+                         COAITIX는 장소와 시간에 관계없이, 실시간 인구 밀집 상황을 한눈에 파악할 수 있습니다.
+                         IOT 장비의 정보를 분석해, 초 단위로 변화하는 공간 상황을 지도와 그래프로 보여줍니다.
+                     </p>
+                     <div class="service-features" style="margin: 0 0 0 5rem;">
+                         <div class="feature-item">
+                             <i class="bi bi-1-square-fill text-primary"></i>
+                             <span>실시간 분석과 초 단위 업데이트트</span>
+                         </div>
+                         <div class="feature-item">
+                             <i class="bi bi-2-square-fill text-primary"></i>
+                             <span>누구나 쉽게 이해하는 직관적인 UI</span>
+                         </div>
+                         <div class="feature-item">
+                             <i class="bi bi-3-square-fill text-primary"></i>
+                             <span>다양한 공간에 적용 가능한 확장성</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
     </div>
 </section>
 
-<!-- 제품2 상세 내용 섹션 -->
+<!-- COAITIX 상세 내용 섹션 -->
 <section class="section" id="coaitix-detail">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center mb-5">
-                <h2 class="section-title">COAITIX 상세 정보</h2>
-                <p class="lead">클라우드 기반 AI 분석으로 데이터의 가치를 극대화</p>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="detail-content">
+                    <h5 class="detail-title">실시간 분석과 초 단위 업데이트</h5>
+                    <p class="detail-text">
+                        COAITIX는 IoT 장비를 통해 수집된 정보를 초 단위로 분석해 
+                        장소와 시간에 관계없이 실시간 인구 밀집 상황을 정확하게 파악합니다. 
+                        마치 공간에 대한 "생체 신호"를 모니터링하는 것처럼, 변화하는 움직임을 놓치지 않습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="detail-image-container">
+                    <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="데이터 분석" class="detail-image">
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-graph-up display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">데이터 분석</h5>
-                        <p class="card-text">
-                            고급 분석 알고리즘을 통해 
-                            숨겨진 패턴과 트렌드를 발견합니다.
-                        </p>
-                    </div>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="detail-content">
+                    <h5 class="detail-title">누구나 쉽게 이해하는 직관적인 UI</h5>
+                    <p class="detail-text">
+                        COAITIX는 직관적인 UI 디자인으로 복잡한 공간 데이터 분석을 초보자도 쉽게 이해하고 활용할 수 있습니다. 
+                        모든 사람들이 전문 지식이 없어도, 데이터의 의미를 직관적으로 파악할 수 있습니다.
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-lightning display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">실시간 처리</h5>
-                        <p class="card-text">
-                            대용량 데이터를 실시간으로 처리하여 
-                            즉시 인사이트를 제공합니다.
-                        </p>
-                    </div>
+            <div class="col-lg-6">
+                <div class="detail-image-container">
+                    <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="실시간 처리" class="detail-image">
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center">
-                        <i class="bi bi-shield-check display-4 text-primary mb-3"></i>
-                        <h5 class="card-title">보안 강화</h5>
-                        <p class="card-text">
-                            엔터프라이즈급 보안 시스템으로 
-                            데이터의 안전성을 보장합니다.
-                        </p>
-                    </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="detail-content">
+                    <h5 class="detail-title">다양한 공간에 적용 가능한 확장성</h5>
+                    <p class="detail-text">
+                        COAITIX는 하나의 시스템으로 소형 축제부터 대형 전시회까지 모든 공간에 즉시 적용 가능합니다.
+                        표준화된 설계로 특별한 커스터마이징 없이도 바로 사용할 수 있는 유연한 구조를 제공합니다.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="detail-image-container">
+                    <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="보안 강화" class="detail-image">
                 </div>
             </div>
         </div>
@@ -233,17 +219,6 @@
 
 <!-- 스타일 -->
 <style>
-.service-content {
-    padding: 2rem 0;
-}
-
-.service-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-}
-
 .service-features {
     margin-top: 2rem;
 }
@@ -319,6 +294,43 @@
     font-weight: 800;
 }
 
+/* COAITIX 상세 내용 스타일 */
+.detail-content {
+    padding: 2rem 12rem 2rem 0;
+}
+
+.detail-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
+}
+
+.detail-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.detail-image-container {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.detail-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.detail-image:hover {
+    transform: scale(1.05);
+}
+
 /* 반응형 디자인 */
 @media (max-width: 991.98px) {
     .service-image-placeholder {
@@ -333,6 +345,18 @@
     .placeholder-content h5 {
         font-size: 1.3rem;
     }
+    
+    .detail-title {
+        font-size: 1.6rem;
+    }
+    
+    .detail-text {
+        font-size: 1rem;
+    }
+    
+    .detail-image {
+        max-width: 350px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -346,6 +370,23 @@
     
     .placeholder-content h5 {
         font-size: 1.2rem;
+    }
+    
+    .detail-content {
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .detail-title {
+        font-size: 1.4rem;
+    }
+    
+    .detail-text {
+        font-size: 0.95rem;
+    }
+    
+    .detail-image {
+        max-width: 300px;
     }
 }
 </style>

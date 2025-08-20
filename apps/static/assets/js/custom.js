@@ -226,3 +226,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Company Page JavaScript
+// 회사 소개 섹션 텍스트 애니메이션
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedDescription = document.getElementById('animated-description');
+    
+    if (animatedDescription) {
+        const sentences = [
+            'AI 혁신으로 여는 관광 DX 시대<br>',
+            'ENCLE은 AI 기술과 관광 전문성을 융합해<br>관광 산업의 새로운 기준을 만들어갑니다',
+        ];
+        let idx = 0;
+        const desc = animatedDescription;
+        let isFirst = true;
+
+        function showNextSentence() {
+            desc.innerHTML = sentences[idx];
+            desc.style.opacity = 0.2;
+            // 강제로 리플로우 발생시켜 애니메이션 재실행
+            void desc.offsetWidth;
+            desc.style.transition = "opacity 0.7s";
+            desc.style.opacity = 1;
+            idx = (idx + 1) % sentences.length;
+        }
+
+        // 첫 문장은 바로 보여주고, 이후부터 애니메이션 적용
+        setTimeout(function animate() {
+            showNextSentence();
+            setTimeout(animate, 2500);
+        }, 0);
+    }
+});
+
+// Company Page 숫자 애니메이션 스크립트
+document.addEventListener('DOMContentLoaded', function() {
+    const stats = document.querySelectorAll('.stat-number');
+    
+    const animateCountUp = (element, target) => {
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            element.textContent = Math.floor(current);
+        }, 30);
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                animateCountUp(entry.target, target);
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    stats.forEach(stat => {
+        observer.observe(stat);
+    });
+});

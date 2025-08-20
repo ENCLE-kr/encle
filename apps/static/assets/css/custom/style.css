@@ -370,9 +370,9 @@ body.other-page .navbar-toggler-icon {
 }
 
 .section-title {
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 2rem;
+    font-size: 3.0rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
 }
 
 .section-eyebrow {
@@ -384,7 +384,7 @@ body.other-page .navbar-toggler-icon {
     font-weight: 600;
     font-size: 2.5rem;
     color: #000000;
-    /* margin-bottom: 2rem; */
+    /* margin: 50px 0 30px 0; */
 }
 
 /* 애니메이션 */
@@ -1348,4 +1348,601 @@ body.other-page .navbar-toggler-icon {
     opacity: 0.9;
     line-height: 1.4;
     color: white;
+}
+
+/* Solution Page Styles */
+/* 서비스 소개 섹션 스타일 */
+.solution-intro-section {
+    background-color: white;
+    color: #1c1c1c;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    position: relative;
+}
+
+.solution-intro-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.solution-intro-section .section-title {
+    color: #1c1c1c;
+    margin: 50px 0 30px 0;
+    line-height: 1.5;
+}
+
+/* .solution-intro-section .lead {
+    color: #1c1c1c;
+} */
+
+.solution-intro-section h5 {
+    color: #1c1c1c;
+}
+
+.solution-intro-section .text-muted {
+    color: #828282 !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Company Page Styles */
+/* 회사 소개 섹션 스타일 */
+.company-intro-section {
+    background-image: url('/static/assets/img/main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.company-intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(28, 28, 28, 0.8);
+    z-index: 1;
+}
+
+.company-intro-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.company-logo {
+    margin-bottom: 1rem;
+}
+
+.company-logo-text {
+    margin-bottom: 3rem;
+}
+
+.logo-image {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.logo-text-image {
+    max-width: 600px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+    animation: slideUpFromBottom 1s ease-out 0.5s both;
+}
+
+.logo-text-image:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slideUpFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.company-description {
+    margin-bottom: 3rem;
+}
+
+.company-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.text-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #ecf0f1;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.company-stat {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.company-stat:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.tourism-content {
+    padding: 2rem 0;
+}
+
+.tourism-features {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 800;
+}
+
+.feature-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ffc107;
+    color: #000000;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-right: 0.75rem;
+    line-height: 1;
+}
+
+.tourism-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.tourism-image-placeholder {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.tourism-image-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.placeholder-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.placeholder-content i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.placeholder-content h5 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-content p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 800;
+}
+
+.value-card {
+    padding: 2rem 2rem 1rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+    border: 1px solid #1c1c1c;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    margin-top: 1rem;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.value-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem 1.5rem 1.5rem 0rem;
+}
+
+.timeline-title {
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #1c1c1c;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-title:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-description {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mission 섹션 스타일 */
+.mission-section {
+    background-color: white;
+}
+
+.mission-section .section-eyebrow {
+    color: #3498db;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mission-section .section-title {
+    color: #1c1c1c;
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin: 50px 0 30px 0;
+    line-height: 1.5;
+}
+
+.mission-text {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.mission-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mission-image {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission-image:hover {
+    transform: scale(1.02);
+}
+
+/* Mission 섹션 통계 스타일 */
+.stats-section {
+    margin-top: 3rem;
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.stat-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+}
+
+.stat-number-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: right;
+    margin-top: 0.3rem;
+}
+
+.stat-divider-top {
+    height: 1px;
+    background: #000000;
+    margin: 0 0 1rem 0;
+}
+
+.stat-divider {
+    height: 1px;
+    background: #e9ecef;
+    margin: 0.5rem 0;
+}
+
+.stat-divider-bottom {
+    height: 1px;
+    background: #000000;
+    margin: 1rem 0 0 0;
+}
+
+.stat-plus {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-left: 0.2rem;
+    line-height: 1;
+}
+
+/* Company Page 반응형 디자인 */
+@media (max-width: 991.98px) {
+    .company-title {
+        font-size: 2.5rem;
+    }
+    
+    .text-container {
+        height: 100px;
+    }
+    
+    .company-text {
+        font-size: 1.1rem;
+    }
+    
+    .logo-image {
+        max-width: 150px;
+    }
+    
+    .logo-text-image {
+        max-width: 250px;
+    }
+    
+    .company-intro-section {
+        padding: 100px 0 60px 0;
+    }
+    
+    .timeline-date {
+        font-size: 1.3rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .tourism-image-placeholder {
+        height: 250px;
+        margin-top: 2rem;
+    }
+    
+    .placeholder-content i {
+        font-size: 3rem;
+    }
+    
+    .placeholder-content h5 {
+        font-size: 1.3rem;
+    }
+    
+    .mission-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .mission-text {
+        font-size: 1.1rem;
+    }
+    
+    .mission-image {
+        height: 300px;
+    }
+    
+    .stats-section {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-text {
+        font-size: 0.9rem;
+    }
+    
+    .stat-plus {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .company-title {
+        font-size: 2rem;
+    }
+    
+    .text-container {
+        height: 80px;
+    }
+    
+    .company-text {
+        font-size: 1rem;
+    }
+    
+    .logo-image {
+        max-width: 120px;
+    }
+    
+    .logo-text-image {
+        max-width: 200px;
+    }
+    
+    .company-intro-section {
+        padding: 80px 0 40px 0;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .tourism-image-placeholder {
+        height: 200px;
+    }
+    
+    .placeholder-content i {
+        font-size: 2.5rem;
+    }
+    
+    .placeholder-content h5 {
+        font-size: 1.2rem;
+    }
+    
+    .value-card {
+        padding: 1.5rem;
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .value-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .mission-section .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .mission-text {
+        font-size: 1rem;
+    }
+    
+    .mission-image {
+        height: 250px;
+    }
+    
+    .stats-section {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-text {
+        font-size: 0.85rem;
+    }
+    
+    .stat-plus {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
 }
