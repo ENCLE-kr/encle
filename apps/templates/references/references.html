@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="references-page">
 <!-- 레퍼런스 소개 섹션 -->
 <section class="solution-intro-section">
     <div class="container">
@@ -20,6 +21,148 @@
     </div>
 </section>
 
+<!-- Outputs 섹션 -->
+<section class="section">
+    <div class="container">
+        <!-- Outputs 섹션 헤더 -->
+        <div class="text-center mb-5">
+            <p class="text-primary section-eyebrow">OUTPUTS</p>
+            <p class="section-header-title mb-4">ENCLE의 성과물 사례</p>
+            <p class="text-muted" style="font-size: 1.1rem;">엔클이 진행한 다양한 프로젝트의 성과물을 사례별로 확인할 수 있습니다</p>
+        </div>
+        
+                 <!-- Outputs 이미지 그리드 -->
+         <div class="usecase-images">
+             <!-- 상단 이미지 3개 -->
+             <div class="row mb-2">
+                 <div class="col-md-4">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="유스케이스 이미지 1" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>거리</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-wifi" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>거리</h5>
+                                 <p>과업명: 거리 혼잡도 측정 시스템<br>과업기간: 2024.01 ~ 2024.06<br>과업내용: 실시간 인구 밀도 측정 및 분석<br>발주기관: 서울시청</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-4">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="유스케이스 이미지 2" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>축제</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-wifi" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>축제</h5>
+                                 <p>축제지의 방문객 수용 능력 및 대기 시간 관리를 위해 일시적이고 집중적으로 인파 관리합니다.</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-4">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="유스케이스 이미지 3" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>전시회</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-wifi" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>전시회</h5>
+                                 <p>동선 분석, 출입구 관리, 특정 구역에서의 체류 시간 등을 분석하여 제한된 공간에서의 동선과 밀집 관리합니다</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             
+             <!-- 하단 이미지 4개 -->
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="유스케이스 이미지 4" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>K-푸드</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>K-푸드</h5>
+                                 <p>K-푸드 소셜 분석</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="유스케이스 이미지 5" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>K-드라마</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>K-드라마</h5>
+                                 <p>K-드라마 소셜 분석</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="유스케이스 이미지 6" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>K-영화</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>K-영화</h5>
+                                 <p>K-영화 소셜 분석</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3">
+                     <div class="usecase-image-container">
+                         <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="유스케이스 이미지 7" class="img-fluid rounded usecase-image">
+                         <div class="usecase-center-text">
+                             <h5>K-뷰티</h5>
+                         </div>
+                         <div class="usecase-overlay">
+                             <div class="usecase-icon">
+                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
+                             </div>
+                             <div class="usecase-text">
+                                 <h5>K-뷰티</h5>
+                                 <p>K-뷰티 소셜 분석</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+</section>
+
 <!-- 레퍼런스 섹션 -->
 <section class="section bg-light">
     <div class="container">
@@ -34,83 +177,98 @@
         <div class="row mb-4">
             <div class="col-lg-12 text-center">
                 <div class="year-filter">
-                    <a href="{{ url_for('references.references') }}"
-                        class="btn btn-outline-primary {% if not selected_year %}active{% endif %}">
+                    <button class="btn btn-outline-primary year-filter-btn {% if not selected_year %}active{% endif %}" 
+                            data-year="all">
                         전체
-                    </a>
-                    <a href="{{ url_for('references.references_by_year', year='2024') }}"
-                        class="btn btn-outline-primary {% if selected_year == '2024' %}active{% endif %}">
+                    </button>
+                    <button class="btn btn-outline-primary year-filter-btn {% if selected_year == '2024' %}active{% endif %}" 
+                            data-year="2024">
                         2024
-                    </a>
-                    <a href="{{ url_for('references.references_by_year', year='2023') }}"
-                        class="btn btn-outline-primary {% if selected_year == '2023' %}active{% endif %}">
+                    </button>
+                    <button class="btn btn-outline-primary year-filter-btn {% if selected_year == '2023' %}active{% endif %}" 
+                            data-year="2023">
                         2023
-                    </a>
-                    <a href="{{ url_for('references.references_by_year', year='2022') }}"
-                        class="btn btn-outline-primary {% if selected_year == '2022' %}active{% endif %}">
+                    </button>
+                    <button class="btn btn-outline-primary year-filter-btn {% if selected_year == '2022' %}active{% endif %}" 
+                            data-year="2022">
                         2022
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
 
-        <!-- 레퍼런스 테이블 -->
+                <!-- 레퍼런스 테이블 -->
         <div class="row">
-            <div class="col-lg-12">
-                {% if references_list %}
-                <div class="table-responsive">
-                                         <table class="table table-hover reference-table">
-                         <thead class="table-primary-custom">
-                            <tr>
-                                <th scope="col" class="text-center">일자</th>
-                                <th scope="col" class="text-center">과업목적</th>
-                                <th scope="col" class="text-center">과업내용</th>
-                                <th scope="col" class="text-center">기관/회사</th>
-                                <!-- <th scope="col">등록일</th> -->
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for reference in references_list %}
-                            <tr class="reference-row">
-                                <td class="reference-date text-center">
-                                    <span class="badge bg-primary">{{ reference.date }}</span>
-                                </td>
-                                <td class="reference-purpose text-center">
-                                    {{ reference.purpose }}
-                                </td>
-                                <td class="reference-content text-center">
-                                    {{ reference.content }}
-                                </td>
-                                <td class="reference-organization text-center">
-                                    <strong>{{ reference.organization }}</strong>
-                                </td>
-                                <!-- <td class="reference-create-date">
-                                    <small class="text-muted">
-                                        {{ reference.create_date.strftime('%Y-%m-%d') }}
-                                    </small>
-                                </td> -->
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                {% else %}
-                <div class="text-center py-5">
-                    <div class="empty-state">
-                        <i class="bi bi-inbox display-1 text-muted"></i>
-                        <h4 class="mt-3">데이터가 없습니다</h4>
-                        <p class="text-muted">
-                            {% if selected_year %}
-                            {{ selected_year }}년에 등록된 레퍼런스가 없습니다.
-                            {% else %}
-                            등록된 레퍼런스가 없습니다.
-                            {% endif %}
-                        </p>
-                    </div>
-                </div>
-                {% endif %}
+            <div class="col-lg-12" id="references-table-container">
+                {% include 'references/_references_table.html' %}
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 연도 필터 버튼 클릭 이벤트
+    document.querySelectorAll('.year-filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const year = this.getAttribute('data-year');
+            
+            // 활성 버튼 스타일 변경
+            document.querySelectorAll('.year-filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // AJAX 요청
+            loadReferences(year, 1);
+        });
+    });
+    
+    // 페이징 클릭 이벤트 (이벤트 위임 사용)
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.pagination .page-link')) {
+            e.preventDefault();
+            const link = e.target.closest('.pagination .page-link');
+            const page = link.getAttribute('data-page');
+            const year = link.getAttribute('data-year');
+            
+            if (page && year) {
+                loadReferences(year, page);
+            }
+        }
+    });
+    
+    // AJAX로 레퍼런스 로드
+    function loadReferences(year, page) {
+        const container = document.getElementById('references-table-container');
+        
+        // 로딩 표시
+        container.innerHTML = '<div class="text-center py-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+        
+        // AJAX 요청
+        fetch(`/references/api/filter?year=${year}&page=${page}`)
+            .then(response => response.json())
+            .then(data => {
+                container.innerHTML = data.table_html;
+                
+                // URL 업데이트 (브라우저 히스토리)
+                const url = new URL(window.location);
+                if (year !== 'all') {
+                    url.searchParams.set('year', year);
+                } else {
+                    url.searchParams.delete('year');
+                }
+                if (page > 1) {
+                    url.searchParams.set('page', page);
+                } else {
+                    url.searchParams.delete('page');
+                }
+                window.history.pushState({}, '', url);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                container.innerHTML = '<div class="text-center py-5"><div class="alert alert-danger">데이터를 불러오는 중 오류가 발생했습니다.</div></div>';
+            });
+    }
+});
+</script>
+</div>
 {% endblock %}
