@@ -59,29 +59,29 @@
             <div class="col-lg-12">
                 {% if references_list %}
                 <div class="table-responsive">
-                    <table class="table table-hover reference-table">
-                        <thead class="table-dark">
+                                         <table class="table table-hover reference-table">
+                         <thead class="table-primary-custom">
                             <tr>
-                                <th scope="col">일자</th>
-                                <th scope="col">과업목적</th>
-                                <th scope="col">과업내용</th>
-                                <th scope="col">기관/회사</th>
+                                <th scope="col" class="text-center">일자</th>
+                                <th scope="col" class="text-center">과업목적</th>
+                                <th scope="col" class="text-center">과업내용</th>
+                                <th scope="col" class="text-center">기관/회사</th>
                                 <!-- <th scope="col">등록일</th> -->
                             </tr>
                         </thead>
                         <tbody>
                             {% for reference in references_list %}
                             <tr class="reference-row">
-                                <td class="reference-date">
+                                <td class="reference-date text-center">
                                     <span class="badge bg-primary">{{ reference.date }}</span>
                                 </td>
-                                <td class="reference-purpose">
+                                <td class="reference-purpose text-center">
                                     {{ reference.purpose }}
                                 </td>
-                                <td class="reference-content">
+                                <td class="reference-content text-center">
                                     {{ reference.content }}
                                 </td>
-                                <td class="reference-organization">
+                                <td class="reference-organization text-center">
                                     <strong>{{ reference.organization }}</strong>
                                 </td>
                                 <!-- <td class="reference-create-date">

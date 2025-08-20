@@ -1946,3 +1946,131 @@ body.other-page .navbar-toggler-icon {
         line-height: 1;
     }
 }
+
+/* Reference Table Styles */
+.table-blue {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-primary-custom {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+.table-primary-custom th {
+    background-color: #3498db !important;
+    color: white !important;
+    border: none !important;
+    padding: 1rem 0.75rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+}
+
+.table-blue thead.table-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+}
+
+.table-blue thead.table-primary th {
+    border: none;
+    padding: 1rem 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-blue tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table-blue tbody tr:hover {
+    background-color: #f8f9ff;
+}
+
+.table-blue tbody td {
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+}
+
+.table-blue .badge.bg-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.table-blue .reference-organization strong {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Dark Blue Reference Table Styles */
+.table-dark-blue {
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.table-dark-blue thead.table-dark-blue-header {
+    background: linear-gradient(135deg, #1a252f, #2c3e50);
+    color: white;
+    border: none;
+}
+
+.table-dark-blue thead.table-dark-blue-header th {
+    border: none;
+    padding: 1.2rem 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.table-dark-blue tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table-dark-blue tbody tr:hover {
+    background-color: #34495e;
+    color: white;
+}
+
+.table-dark-blue tbody td {
+    border-top: 1px solid #34495e;
+    padding: 1.2rem 0.75rem;
+    vertical-align: middle;
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.table-dark-blue tbody tr:hover td {
+    color: white;
+}
+
+.table-dark-blue .badge.bg-dark-blue {
+    background: linear-gradient(135deg, #1a252f, #2c3e50) !important;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.table-dark-blue .reference-organization strong {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.table-dark-blue tbody tr:hover .reference-organization strong {
+    color: white;
+}
