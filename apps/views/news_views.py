@@ -16,8 +16,21 @@ def allowed_file(filename):
 
 @bp.route('/')
 def news():
-    news_list = News.query.order_by(News.date.desc()).all()
-    return render_template('news/news.html', news_list=news_list)
+    page = request.args.get('page', 1, type=int)
+    per_page = 9  # 3x3 그리드
+    
+    # 페이징 처리
+    pagination = News.query.order_by(News.date.desc()).paginate(
+        page=page, 
+        per_page=per_page, 
+        error_out=False
+    )
+    
+    news_list = pagination.items
+    
+    return render_template('news/news.html', 
+                         news_list=news_list,
+                         pagination=pagination)
 
 @bp.route('/update', methods=['GET', 'POST'])
 def update():

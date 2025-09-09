@@ -1452,7 +1452,7 @@ body.other-page .navbar-toggler-icon {
 /* Company Page Styles */
 /* 회사 소개 섹션 스타일 */
 .company-intro-section {
-    background-image: url('/static/assets/img/main.png');
+    background-image: url('/static/assets/img/bg_company.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1775,16 +1775,16 @@ body.other-page .navbar-toggler-icon {
 
 .mission-image {
     width: 100%;
-    max-width: 500px;
-    height: 350px;
+    /* max-width: 500px;
+    height: 350px; */
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-.mission-image:hover {
+/* .mission-image:hover {
     transform: scale(1.02);
-}
+} */
 
 /* Mission 섹션 통계 스타일 */
 .stats-section {
@@ -2192,4 +2192,28 @@ body.other-page .navbar-toggler-icon {
     .pagination .page-item.active {
         display: block;
     }
+}
+
+/* 뉴스 페이지 스타일 */
+.news-page .solution-intro-section {
+    /* padding-bottom: 2rem !important; */
+    min-height: 45vh !important;
+    align-items: flex-end !important;
+}
+
+.news-page .solution-intro-section .container {
+    padding-top: 2rem !important;
+}
+
+.news-page .solution-intro-section .section-title {
+    margin: 50px 0 50px 0;;
+}
+
+.news-page .section {
+    padding-top: 1rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.news-page .solution-intro-section + .section {
+    padding-top: 0 !important;
 }
