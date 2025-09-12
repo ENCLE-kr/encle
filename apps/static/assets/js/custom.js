@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // main/index.html
 let currentSlide = 1;
-const totalSlides = 3;
+const totalSlides = 2;
 
 function changeServiceSlide(direction) {
     const slides = document.querySelectorAll('.service-slide');
