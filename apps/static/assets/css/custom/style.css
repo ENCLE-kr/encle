@@ -2266,3 +2266,218 @@ body.other-page .navbar-toggler-icon {
 .intro-image.last {
     transition-delay: 0.4s;
 }
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 3rem 0 2rem 0;
+    border-top: 1px solid #e9ecef;
+}
+
+/* References page - h5 텍스트 정중앙 배치 */
+.references-page .usecase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.references-page .usecase-image-container:hover .usecase-overlay {
+    opacity: 1;
+}
+
+.references-page .usecase-text h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* SpacePulse Image specific styling */
+.spacepulse-img-2 {
+    max-width: 350px !important;
+}
+
+.spacepulse-img-3 {
+    max-width: 300px !important;
+}
+
+/* Solution page specific styles */
+.solution-page .service-features {
+    margin-top: 2rem;
+}
+
+.solution-page .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 800;
+}
+
+.solution-page .feature-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ffc107;
+    color: #000000;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-right: 0.75rem;
+    line-height: 1;
+}
+
+.solution-page .service-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.solution-page .service-image-placeholder {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.solution-page .service-image-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.solution-page .placeholder-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.solution-page .placeholder-content i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.solution-page .placeholder-content h5 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.solution-page .placeholder-content p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 800;
+}
+
+/* Solution detail content styles */
+.solution-page .detail-content {
+    padding: 2rem 12rem 2rem 0;
+}
+
+.solution-page .detail-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
+}
+
+.solution-page .detail-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.solution-page .detail-image-container {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.solution-page .detail-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Solution page responsive styles */
+@media (max-width: 991.98px) {
+    .solution-page .service-image-placeholder {
+        height: 250px;
+        margin-top: 2rem;
+    }
+    
+    .solution-page .placeholder-content i {
+        font-size: 3rem;
+    }
+    
+    .solution-page .placeholder-content h5 {
+        font-size: 1.3rem;
+    }
+    
+    .solution-page .detail-title {
+        font-size: 1.6rem;
+    }
+    
+    .solution-page .detail-text {
+        font-size: 1rem;
+    }
+    
+    .solution-page .detail-image {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .solution-page .service-image-placeholder {
+        height: 200px;
+    }
+    
+    .solution-page .placeholder-content i {
+        font-size: 2.5rem;
+    }
+    
+    .solution-page .placeholder-content h5 {
+        font-size: 1.2rem;
+    }
+    
+    .solution-page .detail-content {
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .solution-page .detail-title {
+        font-size: 1.4rem;
+    }
+    
+    .solution-page .detail-text {
+        font-size: 0.95rem;
+    }
+    
+    .solution-page .detail-image {
+        max-width: 300px;
+    }
+}

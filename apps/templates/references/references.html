@@ -31,23 +31,19 @@
             <p class="text-muted" style="font-size: 1.1rem;">엔클이 진행한 다양한 프로젝트의 성과물을 사례별로 확인할 수 있습니다</p>
         </div>
         
-                 <!-- Outputs 이미지 그리드 -->
+        <!-- Outputs 이미지 그리드 -->
          <div class="usecase-images">
              <!-- 상단 이미지 3개 -->
              <div class="row mb-2">
                  <div class="col-md-4">
                      <div class="usecase-image-container">
-                         <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="유스케이스 이미지 1" class="img-fluid rounded usecase-image">
-                         <div class="usecase-center-text">
-                             <h5>거리</h5>
-                         </div>
+                         <img src="{{ url_for('static', filename='assets/img/references/outputs_usecase_img_1.jpg') }}" alt="Outputs Usecase Image 1" class="img-fluid rounded usecase-image">
                          <div class="usecase-overlay">
-                             <div class="usecase-icon">
-                                 <i class="bi bi-wifi" style="color: #ffffff;"></i>
-                             </div>
                              <div class="usecase-text">
-                                 <h5>거리</h5>
-                                 <p>과업명: 거리 혼잡도 측정 시스템<br>과업기간: 2024.01 ~ 2024.06<br>과업내용: 실시간 인구 밀도 측정 및 분석<br>발주기관: 서울시청</p>
+                                 <h5>소셜데이터를 이용한 BSI(기업경기지수) 대체 지표 개발</h5>
+                                 <p>• 과업목적: 지표 개발<br>
+                                    • 과업기간: 2024.01 ~ 2024.06<br>
+                                    • 발주기관: 산업연구원</p>
                              </div>
                          </div>
                      </div>
@@ -87,79 +83,62 @@
                      </div>
                  </div>
              </div>
-             
-             <!-- 하단 이미지 4개 -->
-             <div class="row">
-                 <div class="col-md-3">
-                     <div class="usecase-image-container">
-                         <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="유스케이스 이미지 4" class="img-fluid rounded usecase-image">
-                         <div class="usecase-center-text">
-                             <h5>K-푸드</h5>
-                         </div>
-                         <div class="usecase-overlay">
-                             <div class="usecase-icon">
-                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
-                             </div>
-                             <div class="usecase-text">
-                                 <h5>K-푸드</h5>
-                                 <p>K-푸드 소셜 분석</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-3">
-                     <div class="usecase-image-container">
-                         <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="유스케이스 이미지 5" class="img-fluid rounded usecase-image">
-                         <div class="usecase-center-text">
-                             <h5>K-드라마</h5>
-                         </div>
-                         <div class="usecase-overlay">
-                             <div class="usecase-icon">
-                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
-                             </div>
-                             <div class="usecase-text">
-                                 <h5>K-드라마</h5>
-                                 <p>K-드라마 소셜 분석</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-3">
-                     <div class="usecase-image-container">
-                         <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="유스케이스 이미지 6" class="img-fluid rounded usecase-image">
-                         <div class="usecase-center-text">
-                             <h5>K-영화</h5>
-                         </div>
-                         <div class="usecase-overlay">
-                             <div class="usecase-icon">
-                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
-                             </div>
-                             <div class="usecase-text">
-                                 <h5>K-영화</h5>
-                                 <p>K-영화 소셜 분석</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-3">
-                     <div class="usecase-image-container">
-                         <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="유스케이스 이미지 7" class="img-fluid rounded usecase-image">
-                         <div class="usecase-center-text">
-                             <h5>K-뷰티</h5>
-                         </div>
-                         <div class="usecase-overlay">
-                             <div class="usecase-icon">
-                                 <i class="bi bi-chat-dots" style="color: #ffffff;"></i>
-                             </div>
-                             <div class="usecase-text">
-                                 <h5>K-뷰티</h5>
-                                 <p>K-뷰티 소셜 분석</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+
+             <!-- 하단 이미지 3개 -->
+             <div class="row mb-2">
+                <div class="col-md-4">
+                    <div class="usecase-image-container">
+                        <img src="{{ url_for('static', filename='assets/img/detector_1.jpg') }}" alt="유스케이스 이미지 1" class="img-fluid rounded usecase-image">
+                        <div class="usecase-center-text">
+                            <h5>거리</h5>
+                        </div>
+                        <div class="usecase-overlay">
+                            <div class="usecase-icon">
+                                <i class="bi bi-wifi" style="color: #ffffff;"></i>
+                            </div>
+                            <div class="usecase-text">
+                                <h5>거리</h5>
+                                <p>과업명: 거리 혼잡도 측정 시스템<br>과업기간: 2024.01 ~ 2024.06<br>과업내용: 실시간 인구 밀도 측정 및 분석<br>발주기관: 서울시청</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="usecase-image-container">
+                        <img src="{{ url_for('static', filename='assets/img/detector_2.jpg') }}" alt="유스케이스 이미지 2" class="img-fluid rounded usecase-image">
+                        <div class="usecase-center-text">
+                            <h5>축제</h5>
+                        </div>
+                        <div class="usecase-overlay">
+                            <div class="usecase-icon">
+                                <i class="bi bi-wifi" style="color: #ffffff;"></i>
+                            </div>
+                            <div class="usecase-text">
+                                <h5>축제</h5>
+                                <p>축제지의 방문객 수용 능력 및 대기 시간 관리를 위해 일시적이고 집중적으로 인파 관리합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="usecase-image-container">
+                        <img src="{{ url_for('static', filename='assets/img/main.png') }}" alt="유스케이스 이미지 3" class="img-fluid rounded usecase-image">
+                        <div class="usecase-center-text">
+                            <h5>전시회</h5>
+                        </div>
+                        <div class="usecase-overlay">
+                            <div class="usecase-icon">
+                                <i class="bi bi-wifi" style="color: #ffffff;"></i>
+                            </div>
+                            <div class="usecase-text">
+                                <h5>전시회</h5>
+                                <p>동선 분석, 출입구 관리, 특정 구역에서의 체류 시간 등을 분석하여 제한된 공간에서의 동선과 밀집 관리합니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
