@@ -9,8 +9,8 @@ def references():
     page = request.args.get('page', 1, type=int)
     per_page = 10
     
-    # 전체 레퍼런스 쿼리
-    query = Reference.query.order_by(Reference.create_date.desc())
+    # 전체 레퍼런스 쿼리 - 일자 기준 내림차순
+    query = Reference.query.order_by(Reference.date.desc())
     
     # 페이징 처리
     pagination = query.paginate(
@@ -30,10 +30,10 @@ def references_by_year(year):
     page = request.args.get('page', 1, type=int)
     per_page = 10
     
-    # 연도별 레퍼런스 쿼리
+    # 연도별 레퍼런스 쿼리 - 일자 기준 내림차순
     query = Reference.query.filter(
         Reference.date.like(f'{year}%')
-    ).order_by(Reference.create_date.desc())
+    ).order_by(Reference.date.desc())
     
     # 페이징 처리
     pagination = query.paginate(
@@ -58,9 +58,9 @@ def filter_references():
     if year and year != 'all':
         query = Reference.query.filter(
             Reference.date.like(f'{year}%')
-        ).order_by(Reference.create_date.desc())
+        ).order_by(Reference.date.desc())
     else:
-        query = Reference.query.order_by(Reference.create_date.desc())
+        query = Reference.query.order_by(Reference.date.desc())
     
     pagination = query.paginate(
         page=page, 

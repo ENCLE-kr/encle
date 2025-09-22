@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (animatedDescription) {
         const sentences = [
             'AI 혁신으로 여는 관광 DX 시대<br>',
-            'ENCLE은 AI 기술과 관광 전문성을 융합해<br>관광 산업의 새로운 기준을 만들어갑니다',
+            '엔클은 AI 기술과 관광 전문성을 융합해<br>관광 산업의 새로운 기준을 만들어갑니다',
         ];
         let idx = 0;
         const desc = animatedDescription;

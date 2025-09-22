@@ -1330,6 +1330,17 @@ body.other-page .navbar-toggler-icon {
     filter: brightness(0.3);
 }
 
+/* Prevent cropping for specific images */
+.usecase-image-container.no-crop {
+    aspect-ratio: auto;
+}
+
+.usecase-image-container.no-crop .usecase-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .references-page .usecase-image-container:hover .usecase-center-text {
     opacity: 0;
 }
@@ -1425,7 +1436,7 @@ body.other-page .navbar-toggler-icon {
 }
 
 .usecase-text h5 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
     color: white;
@@ -2272,39 +2283,6 @@ body.other-page .navbar-toggler-icon {
     background-color: #f8f9fa;
     padding: 3rem 0 2rem 0;
     border-top: 1px solid #e9ecef;
-}
-
-/* References page - h5 텍스트 정중앙 배치 */
-.references-page .usecase-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.references-page .usecase-image-container:hover .usecase-overlay {
-    opacity: 1;
-}
-
-.references-page .usecase-text h5 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
 }
 
 /* SpacePulse Image specific styling */
